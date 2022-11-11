@@ -15,6 +15,11 @@ class TestMaxHeapMethods(unittest.TestCase):
         heap = MaxHeap([15, 4, 9, 1])
         heap.push(8)
         self.assertEqual(str(heap), str(MaxHeap([15, 8, 9, 1, 4])))
+    
+    def test_push_max_value(self):
+        heap = MaxHeap([15, 4, 9, 1])
+        heap.push(20)
+        self.assertEqual(str(heap), str(MaxHeap([20, 15, 9, 1, 4])))
 
     def test_push_to_empty_heap(self):
         heap = MaxHeap([])
