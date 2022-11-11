@@ -23,7 +23,9 @@ class MaxHeap:
         return max_item
 
     def peek(self):
-        if self.heap[1]:
+        if len(self.heap) < 2:
+            return False
+        elif self.heap[1]:
             return self.heap[1]
         else:
             return False
